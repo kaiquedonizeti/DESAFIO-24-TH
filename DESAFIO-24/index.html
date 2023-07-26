@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Desafio 24</title>
+</head>
+<body>
+
+    <h1>Conversor de temperatura de Celsius para Fahrenheit e Kelvin</h1>
+    
+    <div id="container">
+        <div>
+            <label for="celsius">Digite uma temperatura em celsius</label>
+            <div><input type="number" name="celsius" id="grau-cel"></div>
+        </div>
+
+        <div><input type="radio" name="converter" id="CtoF"/>Celsius para Fahrenheit</div>
+        <div><input type="radio" name="converter" id="CtoK"/>Celsius para Kelvin</div>
+
+        <div id="resp"></div>
+    </div>
+
+    <button onclick="conversor()">Calcular</button>
+
+    <script>
+        function conversor(){
+        var grau_cel = parseInt(document.getElementById("grau-cel").value)
+        var resposta = document.getElementById("resp")
+        var Far = document.getElementById("CtoF")
+        var Kel = document.getElementById("CtoK")
+        
+        if(Far.checked==true)
+        resp.innerHTML = `${ctof(grau_cel)} °F`
+        if(Kel.checked==true)
+        resp.innerHTML = `${ctok(grau_cel)} °K`
+        }
+
+        function ctof(x){
+            return (1.8*x + 32)
+        }
+        function ctok(y) {
+            return (y + 273)
+        }
+
+    </script>
+
+</body>
+</html>
